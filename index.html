@@ -1,0 +1,133 @@
+<html>
+<head>
+    <title>Magical Parallelotron</title>
+    <script src="/js/libs.js"></script>
+    <script src="/js/main.js"></script>
+    <style>
+        html {
+            font-family: Arial,sans-serif;
+            background: #232323;
+            text-align: center;
+        }
+        body {
+            margin-top: 30px;
+        }
+        h1 {
+            color: #FEFEFE;
+            text-align: center;
+        }
+        a {
+            color: #FEFEFE;
+            margin: 0px 4px;
+        }
+        a:hover,
+        #closeButton:hover {
+            color: red;
+        }
+        p {
+            margin: 0px;
+        }
+        #counters {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 9;
+            color: #232323;
+            width: 250px;
+            height: 70px;
+            font-size: 0.8em;
+        }
+        #counters td {
+            font-size: 0.9em;
+        }
+        #artboard {
+            box-shadow: 0px 0px 20px #000000;
+            height: 600px;
+            width: 1200px;
+            position: relative;
+            margin: 30px auto 0px;
+            background: #FEFEFE;
+        }
+        #aboutPopWrapper {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            z-index: 99;
+            text-align: left;
+        }
+        #aboutPop {
+            box-shadow: 0px 0px 20px #000000;
+            background: #FEFEFE;
+            position: relative;
+            margin: 0 auto;
+            top: 20px;
+            width: 1080px;
+            padding: 20px 20px 20px 30px;
+        }
+        #aboutPop h1 {
+            color: #232323;
+        }
+        p {
+            margin: 5px 0px;
+        }
+        #closeButton {
+            color: #232323;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            margin: 30px auto 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Magical Parallelotron</h1>
+    <a href="#about" title="About" id="aboutButton">About</a>
+    <a href="#debug" title="Debug" id="debugButton">Debug</a>
+    <a href="#theme" title="Swap Theme" id="themeButton">Swap Theme</a>
+    <a href="/" title="Reset" id="resetButton">Reset</a>
+    <div id="artboard">
+        <div id="counters">
+            <table>
+                <tr>
+                    <td class="counterType"></td>
+                    <td class="counterValue"></td>
+                </tr>
+                <tr>
+                    <td class="counterType"></td>
+                    <td class="counterValue"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="aboutPopWrapper">
+        <div id="aboutPop">
+            <h1>About</h1>
+            <p><strong>Author:</strong><br />github.com/MrDaar</p><br />
+            <p><strong>General Info:</strong><br />Based on http://caniuse.com/#feat=svg SVG support is high so I should be okay...<br />
+            Decided to experiment with SVG because they&rsquo;re flexible and practical.<br />
+            If I were to do this in practice I think I&rsquo;d just use a canvas.<br />
+            Not sure if this would fall in the category of game or visiualization.<br />
+            Played with Processing first, because I&rsquo;m familiar with it, but been wanting to play with Raphael...<br />
+            Would be a lot easier to print, export, and generally have external things interact with SVGs.<br />
+            Made a generic shape, draggable dot and connecting line, so you could use this to make something bigger.<br />
+            There&rsquo;s a lot that could be moved into a proper Raphael plugin, but I&rsquo;ll leave that for another time ;)</p><br />
+            <strong>Usage:</strong><br />
+                <ol>
+                    <li>Select three arbitrary points.</li>
+                    <li>A blue parallelogram and yellow circle will appear.</li>
+                    <li>There are three possible parallelograms, but we create the one that is not bisected by either of the paths you have just created.</li>
+                    <li>A strange shape, and a point will appear on the left. They are examples of the generic dot, and shape that can be created.</li>
+                    <li>Have some fun moving the red points around the artboard.</li>
+                    <li>If you enable &ldquo;Debug&rdquo; you can make pretty snow flakes and flowers, with the diagonals that will appear while moving the points :)</li>
+                    <li>You can change to another theme with the &ldquo;Swap Theme&rdquo; link. Currently only one other theme.</li>
+                    <li>&ldquo;Reset&rdquo; will clear the artboard.</li>
+                </ol>
+            <p><strong>Disclaimer:</strong><br />The CSS and HTML are pretty terrible, but it&rsquo;s a JavaScript experiment!</p>
+            <p><a href="/" id="closeButton">close</a></p>
+        </div>
+    </div>
+</body>
+</html>
