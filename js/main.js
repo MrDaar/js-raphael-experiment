@@ -1,5 +1,5 @@
 /**
- * @author Darius de Witt <darius.dewitt@gmail.com>
+ * @author github.com/MrDaar
  * @description JavaScript Raphael Experiment.
  *
  * ************************************************************************************************************
